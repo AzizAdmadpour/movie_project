@@ -1,0 +1,294 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: rgb(45, 45, 45);
+}
+@font-face{
+    font-family: space_crusaders;
+    src: url("assets/fonts/space_crusaders/Space\ Crusaders.otf");
+    src: url("assets/fonts/space_crusaders/Space\ Crusaders\ Italic.ttf");
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.502);
+    color: gray;
+}
+header .logo {
+    height: 50px;
+}
+header .menu{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+header .menu a {
+    text-decoration: none;
+    transition-duration: 0.3s;
+    color: gray;
+}
+header .menu a:hover{
+    color: purple;
+}
+header .dropdown{
+    cursor: pointer;
+    position: relative;
+ 
+}
+header .dropdown .subMenu{
+    display: none;
+    position: absolute;
+    width: 120px;
+    padding: 0px 0px;
+    left: -30px;
+    top: 18px;
+    background-color: rgba(240, 240, 240, 0.947);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.317);
+
+}
+header .dropdown:hover .subMenu{
+    display: block;
+   
+}
+header .dropdown .subMenu a{
+    display: block;
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+
+}
+
+header .dropdown .subMenu a:hover{
+    background-color: rgba(128, 128, 128, 0.315);
+}
+
+.menuMobile{
+    display: none !important;
+    font-size: 22px;
+    cursor: pointer;
+}
+.menuMobile:active{
+    color: gray;
+    transform: scale(1.2);
+}
+
+.containerMain{
+    background-color: #bdbdbd13;
+    min-height: 90vh;
+    padding: 20px 5%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+}
+.containerMain .content{
+    
+    grid-column: 1/10;
+}
+.containerMain .sidebar{
+    
+  
+    grid-column: 10/-1;
+    padding: 0px 5px;
+}
+.banner{
+    position: relative;
+}
+.move_cover{
+    width: 96%;
+    height: 400px;
+    object-fit: cover;
+
+}
+.banner .name{
+    position: absolute;
+    color: white;
+    bottom: 80px;
+    font-size: 28px;
+    left: 30px;
+    text-transform: capitalize;
+}
+.banner .discreption{
+    position: absolute;
+    color: white;
+    bottom: 45px;
+    font-size: 18px;
+    left: 30px;
+    text-transform: capitalize;
+}
+.sidebar .contianer_news{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #eeee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.sidebar .contianer_news:hover{
+    background-color: #eeee;
+    transform: scale(1.05);
+}
+.sidebar .contianer_news .moveDetail .category{
+    background-color: rgba(184, 184, 15, 0.272);
+    display: inline;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
+.sidebar .contianer_news .moveDetail .moveName
+{
+    margin-top: 10px;
+    font-size: 20px;
+    
+}
+.sidebar .contianer_news img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.card .title{
+    font-size: 18px;
+    margin-top: 3px;
+    
+}
+.card .rank{
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.537);
+    height: 300px;
+}
+.card .rank .rankText{
+    position: absolute;
+    bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.422);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 3px 10px;
+    color: yellow;
+
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+}
+.card:hover .rank{
+    display: block;
+    position: absolute;
+    top: 0px;
+}
+.move_section{
+    margin: 50px 0px;
+}
+.move_section .move_section_text{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.212);
+    font-size: 18px;
+   
+    font-family: space_crusaders;
+}
+.movie_container{
+    display: flex;
+    justify-content: space-around   ;
+    
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+footer{
+    background-color: rgba(128, 128, 128, 0.098);
+    text-align: right;
+    padding: 20px 3%;
+    border-top: 1px solid rgb(214, 214, 214);
+}
+.aboutAndNamad img{
+    height: 150px;
+    width: 100px;
+    object-fit: scale-down;
+}
+.aboutAndNamad{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px  ;
+}
+.aboutAndNamad .namad{
+    display: flex;
+    gap: 20px;
+}
+.aboutAndNamad .about .aboutTitle{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.aboutAndNamad .about .aboutText{
+line-height: 25px;
+
+}
+.iconsAndCopyRight {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.306);
+
+}
+.iconsAndCopyRight .icons{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width:1200px){
+    .aboutAndNamad{
+        display: block;
+    }
+    .menu{
+        background-color: red;
+       display: none !important;
+    }
+
+    .menuMobile{
+        display: block !important;
+    }
+
+    .containerMain .content{
+ 
+        grid-column: 1/-1;
+    }
+    .containerMain .sidebar{
+    
+        grid-column: 1/-1;
+    }
+    .sidebar .contianer_news{
+        gap: 10px;
+    }
+    .sidebar{
+        margin-top: 70px;
+    }
+    .movie_container{
+        gap: 40px;
+    }
+}
